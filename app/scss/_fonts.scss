@@ -1,0 +1,8 @@
+@import "_mixins/font-face";
+
+@include font-face("open-reg", "../fonts/Opensans/Opensans");
+@include font-face("open-reg", "../fonts/OpenSansBold/OpenSansBold", bold);
+@include font-face("mont-reg", "../fonts/MontserratRegular/MontserratRegular");
+@include font-face("mont-reg", "../fonts/MontserratMedium/MontserratMedium", 500);
+@include font-face("mont-reg", "../fonts/MontserratSemiBold/MontserratSemiBold", 600);
+@include font-face("mont-reg", "../fonts/MontserratBold/MontserratBold", bold);
