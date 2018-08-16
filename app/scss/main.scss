@@ -368,13 +368,15 @@ video {
 
 #about {
 	color: #ffffff;
-	background: linear-gradient(0deg, rgba(0, 0, 0, .8), rgba(0, 0, 0, .6)), url('../img/bg_about.jpg') no-repeat fixed;
+	background: linear-gradient(0deg, rgba(0, 0, 0, .8), rgba(0, 0, 0, .6)), url('../img/bg_about.jpg') no-repeat;
 	background-position: center;
 	background-size: cover;
 	overflow: hidden;
 	margin-top: 10px;
 	padding-left: 15px;
 	padding-right: 15px;
+	position: relative;
+	background-attachment: fixed;
 }
 
 .about__description {
