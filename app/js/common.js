@@ -20,7 +20,10 @@ $(function() {
 		}
 	});
 
-	$('#navbar-collapse').removeClass('in');
+	var navMain = $(".navbar-collapse"); 
+     navMain.on("click", "a:not([data-toggle])", null, function () {
+         navMain.collapse('hide');
+     });
 	
 	$("#menu").on("click","a", function (event) {
 		event.preventDefault();
