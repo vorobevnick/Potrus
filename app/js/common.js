@@ -27,7 +27,7 @@ $(function() {
 
 		top = $(id).offset().top;
 
-		$('body,html').animate({scrollTop: top - 190}, 1500);
+		$('body,html').animate({scrollTop: top - 100}, 1500);
 	});
 
 	$("#product").on("click","a", function (event) {
@@ -57,7 +57,7 @@ $(function() {
 				minlength: "Введите не менее 2-х символов в поле 'Имя'"
 			},
 			tel: {
-				required: "Поле 'Телефон' обязательно к заполнению",
+				required: "Поле обязательно к заполнению",
 				minlength: "формат телефона X XXX XX XX XX" 
 			}
 		}

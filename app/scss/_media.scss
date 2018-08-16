@@ -5,22 +5,147 @@
 
 // ≥1200px
 @include media-breakpoint-down(lg) {
-	
+	.navbar {
+		max-width: 920px;
+	}
+	.nav-link {
+		font-size: 1em;
+	}
+	.header-contact {
+		&__phone {
+			font-size: 1.2em;
+		}
+		&__link {
+			font-size: 1em;
+		}
+	}
+	.section-header {
+		font-size: 2em;
+	}
 }
 
 // ≥992px
 @include media-breakpoint-down(md) {
+	.nav-item:not(:last-child) {
+		margin-bottom: 15px;
+	}
 
+	.navbar {
+		max-width: 690px;
+	}
+
+	.navbar-toggler {
+		order: -1;
+	}
+	.navbar-brand {
+		order: 1;
+	}
+	.header-contact {
+		order: 2;
+	}
+	.navbar-collapse {
+		order: 3;
+	}
+	.nav-link {
+		width: 40%;
+	}
+
+	.section-header {
+		font-size: 1.6em;
+	}
 }
 
 // ≥768px
 @include media-breakpoint-down(sm) {
+	.navbar {
+		max-width: 510px;
+	}
+	video {
+		display: none;
+	}
+	#slider {
+		background: linear-gradient(270deg, hsla(0, 0%, 100%, .8), hsla(0, 0%, 100%, .8)), url('../img/bg_about.jpg');
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center;
+	}
 
+	.header-contact {
+		flex-direction: column;
+		&__phone {
+			margin-right: 0;
+			margin-bottom: 10px;
+		}
+		&__link {
+			font-size: 1em;
+		}
+	}
+
+	.slide-text {
+		font-size: 2em;
+	}
+	
+	.product-header {
+		margin-top: 20px;
+	}
+	.animated {
+		animation-duration: 0s!important;
+		animation-fill-mode: none!important;
+	}
 }
 
 // ≥576px
 @include media-breakpoint-down(xs) {
+	.navbar {
+    max-width: 450px;
+	}
+	.navbar-brand{
+		display: none;
+	}
+	
+	.slide-text {
+		font-size: 1.5em;
+	}
 
+	.product-section {
+		padding-top: 5px;
+	}
+
+	.product-header {
+		font-size: 1.3em;
+	}
+
+	ul {
+		margin-right: 10px;
+	}
+
+	.product-description {
+		font-size: 1.3em;
+    padding-left: 15px;
+		padding-right: 15px;
+		&__list {
+			font-size: 1.2em;
+			margin-right: 15px;
+			margin-left: 15px;
+		}
+	}
+	.product-features {
+		margin-left: 15px;
+	}
+
+	.product-section__description {
+    font-size: 1em;
+    margin-bottom: 30px;
+    line-height: 1.7em;
+    margin-right: 15px;
+    margin-left: 15px;
+	}
+	.product-section-header {
+		white-space: normal;
+		&__price {
+			white-space: nowrap;
+		}
+	}
 }
 
 
