@@ -19,6 +19,8 @@ $(function() {
 				$menu.removeClass("fixed").addClass("default");
 		}
 	});
+
+	$('#navbar-collapse').removeClass('in');
 	
 	$("#menu").on("click","a", function (event) {
 		event.preventDefault();
