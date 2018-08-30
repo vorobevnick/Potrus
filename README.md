@@ -1,3 +1,3 @@
 # Potrus
 
-посмотреть сайт https://vorobevnick.github.io/Potrus/app/
+посмотреть сайт http://potrus74.ru/
