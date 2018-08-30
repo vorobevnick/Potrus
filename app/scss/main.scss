@@ -101,6 +101,10 @@ b, strong {
 	font-size: 0.8em;
 }
 
+.animated {
+	animation-duration: .7s;
+}
+
 /* --------------- HEADER --------------- */
 .bg-light {
 	background-color: transparent!important
@@ -310,7 +314,7 @@ video {
 		font-size: 1.4em;
 		line-height: 1.5em;
 		&__list {
-			font-size: 1.3em;
+			font-size: 1em;
 			line-height: 1.5em;
 		}
 	}
@@ -391,7 +395,7 @@ video {
 .about-list {
 	max-width: 960px;
 	margin: 0 auto;
-	font-size: 1.5em;
+	font-size: 1.3em;
 	line-height: 1.5em;
 	list-style-type: none;
 	margin-bottom: 70px;
@@ -484,6 +488,14 @@ label.error {
 	top: 35px;
 }
 
+.success-submit {
+	display: none;
+	padding: 30px;
+	text-align: center;
+	background-color: #dddddd;
+	font-size: 18px;
+}
+
 .map {
 	margin: 50px auto 30px;
 	width: 100%;
@@ -511,4 +523,60 @@ label.error {
 	}
 }
 
+.cookie {
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	text-align: center;
+	background: #000;
+	color: #ffffff;
+	padding: 30px 20px;
+}
+
+.close {
+	width: 24px;
+	height: 24px;
+	background: #ff0000;
+	position: absolute;
+	right: 0;
+	top: 0;
+	cursor: pointer;
+	&::before {
+		content: '';
+		display: inline-block;
+		position: absolute;
+		width: 24px;
+		height: 2px;
+		background: #ffffff;
+		top: 50%;
+		left: 0;
+		transform: translateY(-50%) rotate(45deg);
+	}
+	&::after {
+		content: '';
+		display: inline-block;
+		position: absolute;
+		width: 24px;
+		height: 2px;
+		background: #ffffff;
+		top: 50%;
+		left: 0;
+		transform: translateY(-50%) rotate(-45deg);
+	}
+}
+
+/* --------------- 404 --------------- */
+.header-404 {
+	margin-top: 40px;
+	&__link {
+		font-size: 1.3em;
+		color: #333333;
+		transition: all .2s ease;
+		&:hover {
+			text-decoration: none;
+			color: rgba(51, 51, 51, 0.7);
+		}
+	}
+}
 @import "media"; // Always at the end

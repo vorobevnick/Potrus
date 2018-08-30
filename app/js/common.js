@@ -35,7 +35,7 @@ $(function() {
 		$('body,html').animate({scrollTop: top - 100}, 1500);
 	});
 
-	$("#product").on("click","a", function (event) {
+	$("#product-item").on("click","a", function (event) {
 		event.preventDefault();
 
 		let id  = $(this).attr('href'),
@@ -68,6 +68,30 @@ $(function() {
 		}
 	});
 });
+
+$("form").submit(function() {
+	var th = $(this);
+	$.ajax({
+			type: "POST",
+			url: "mail.php",
+			data: th.serialize()
+	}).done(function() {
+			setTimeout(function() {
+					onSuccess();
+					th.trigger("reset");
+			}, 1000);
+	});
+	return false;
+});
+
+$(".close").on("click",function (event) {
+	$('.cookie').css('display','none');
+});
+
+function onSuccess() {
+	$('#form').css('display','none');
+	$('.success-submit').css('display','block');
+}
 
 var isScrolling = false;
  
